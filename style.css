@@ -55,9 +55,11 @@ a {
 a:hover {
   cursor: pointer;
   color: #1B9BD9;
-  border-left:3.5px solid;
-  border-top:3px solid;
+  border-left: 3px solid;
+  border-top: 4px solid;
   padding: 15px 0px 1px;
+  /* transform: scale(1.1);
+  transition: transform 0.1 ease; */
 }
 
 li {
@@ -435,6 +437,7 @@ button {
 
 #highlights .main {
   display: flex;
+  overflow: hidden;
 }
 
 #highlights .main .text-container h1{
@@ -475,19 +478,80 @@ button {
 
 #highlights .main .img-vid img{
   position: relative;
-  right: 7em;
+  left: 2em;
   top: 12em;
   z-index: -333;
 }
 
+.video-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.video-container {
+  position: relative;
+  display: flex;
+  left: 5em;
+  top: 4.2em;
+  align-items: center;
+  justify-content: center;
+  width: 16rem;
+  height: 19.6rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  z-index: -333;
+  background-color: #d65b7e;
+}
+
+video {
+  height: auto;
+  width: 100%;
+}
+
+.video-controls {
+  position: absolute;
+  bottom: 0%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .video-controls button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
+} */
+
+/* .video-controls img {
+  width: 45px;
+  height: 45px;
+} */
+.video-main h4{
+  position: relative;
+  top: 5em;
+  left: 7.7em;
+  font-family: sans-serif;
+  font-size: 12px;
+  z-index: -333;
+  overflow: hidden;
+}
+
 #highlights .main button{
   position: relative;
-  right: 4em;
-  top: 45em;
-  width: 65%;
+  right: 10em;
+  top: 47.9em;
+  width: 85%;
   color: #BF0E40;
   background-color: white;
   border: 2px solid;
+  overflow-x: hidden;
   z-index: -333;
 }
 
@@ -505,7 +569,7 @@ button {
   font-size: 40px;
   font-family: arial;
   width: 50%;
-  margin-top: 3.5em;
+  margin-top: 6.5em;
   margin-left: 7.5em;
   padding-top: 3em;
 }
@@ -536,3 +600,215 @@ button {
   font-family: sans-serif;
 }
 
+footer .footer-container .footer-links{
+  display: flex;
+  /* float: right; */
+  text-align: center;
+  justify-content: center;
+  margin: -13.7em;
+  
+}
+
+.footer-container .logo-img {
+  display: flex;
+  margin: 6em 0 5em 3.5em;
+}
+
+.footer-container .logo-img .logo-text {
+  margin-left: 0.4em;
+  padding-right: 2em;
+  font-size: 30px;
+  font-family: arial;
+  color: #bf0e40;
+  line-height: 26px;
+  align-content: center;
+}
+
+.footer-container .social-icons p{
+  margin: 0 0 0.5em 4em;
+  font-family: arial;
+  font-weight: 600;
+  color: #1B9BD9;
+}
+
+.footer-container .social-icons .social-img{
+  margin-left: 2em;
+}
+
+.footer-container .social-icons .social-img .telegram{
+  width: 40px;
+}
+
+.footer-container .social-icons .social-img .tiktok{
+  width: 30px;
+  margin-bottom: 5px;
+}
+
+.footer-container .social-icons .social-img .whatsapp{
+  width: 30px;
+  margin-bottom: 5px;
+}
+
+.footer-container .social-icons .social-img .spotify{
+  width: 30px;
+  margin-bottom: 5px;
+}
+
+.footer-container .social-icons .social-img a:hover{
+  border: none;
+}
+
+.footer-container .footer-links .explore h2{
+  color: #BF0E40;
+  font-family: arial;
+  font-weight: 600;
+  margin-bottom: 2em;
+  text-decoration: underline #1B9BD9;
+  text-underline-offset: 15px;
+}
+
+.footer-container .footer-links .explore ul li{
+  margin-bottom: 2em;
+  font-family: arial;
+  font-size: 18px;
+}
+
+.footer-container .footer-links .explore ul li a{
+  color: #000;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.footer-container .footer-links .explore ul li a:hover{
+  color: #BF0E40;
+  text-decoration: underline #1B9BD9;
+  text-underline-offset: 10px;
+  border: none;
+}
+
+.footer-container .footer-links .pricing h2{
+  color: #BF0E40;
+  font-family: arial;
+  font-weight: 600;
+  margin-bottom: 2em;
+  text-decoration: underline #1B9BD9;
+  text-underline-offset: 15px;
+}
+
+.footer-container .footer-links .pricing ul li{
+  margin-bottom: 2em;
+  font-family: arial;
+  font-size: 18px;
+}
+
+.footer-container .footer-links .pricing ul li a{
+  color: #000;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.footer-container .footer-links .pricing ul li a:hover{
+  color: #BF0E40;
+  text-decoration: underline #1B9BD9;
+  text-underline-offset: 10px;
+  border: none;
+}
+
+.footer-container .footer-links .help h2{
+  color: #BF0E40;
+  font-family: arial;
+  font-weight: 600;
+  margin-bottom: 2em;
+  text-decoration: underline #1B9BD9;
+  text-underline-offset: 15px;
+}
+
+.footer-container .footer-links .help ul li{
+  margin-bottom: 2em;
+  font-family: arial;
+  /* font-size: 20px; */
+}
+
+.footer-container .footer-links .help ul li a{
+  color: #000;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.footer-container .footer-links .help ul li a:hover{
+  color: #BF0E40;
+  text-decoration: underline #1B9BD9;
+  text-underline-offset: 10px;
+  border: none;
+}
+
+.footer-container .footer-links .company h2{
+  color: #BF0E40;
+  font-family: arial;
+  font-weight: 600;
+  margin-bottom: 2em;
+  text-decoration: underline #1B9BD9;
+  text-underline-offset: 15px;
+}
+
+.footer-container .footer-links .company ul li{
+  margin-bottom: 2em;
+  font-family: arial;
+  font-size: 18px;
+}
+
+.footer-container .footer-links .company ul li a{
+  color: #000;
+  font-weight: 500;
+  font-size: 1.2em;
+}
+
+.footer-container .footer-links .company ul li a:hover{
+  color: #BF0E40;
+  text-decoration: underline #1B9BD9;
+  text-underline-offset: 10px;
+  border: none;
+}
+
+.footer-container .footer-links .company{
+  margin-left: 7em;
+}
+
+.footer-container .footer-links .help{
+  margin-left: 5em;
+}
+
+.footer-container .footer-links .pricing{
+  margin-left: 5em;
+}
+
+.footer-container .footer-links .explore{
+  margin-left: 15em;
+}
+
+footer .copyright{
+  text-align: center;
+  margin-top: 12em;
+  background-color: #BF0E40;
+  height: 3.5em;
+  align-content: center;
+  color: white;
+  font-family: arial;
+  font-size: 20px;
+}
+
+.footer-container #btnScrollToTop{
+  position: fixed;
+  right: 4em;
+  bottom: 3em;
+  width: 3em;
+  height: 3em;
+  cursor: pointer;
+  box-shadow: 0 0 4px #000;
+  opacity: 93%;
+
+}
+
+.footer-container #btnScrollToTop:active{
+  color: #9b042f;
+}
